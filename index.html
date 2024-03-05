@@ -5,28 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- async: load this js file at the same time,asynchronously as html file -->
     <script src="script.js" async></script>
     <title>Mix-Or-Match</title>
 </head>
 
 <body>
     <h1 class="page-title">Mix-Or-Match</h1>
-
-    <div class="overlay-text">
-        Click To Start
-    </div>
-
-    <div id="game-over-text" class="overlay-text">
-        GAME OVER
+    <!-- OVERLAY TEXT SECTION -->
+    <div class="overlay-text visible">Click To Start</div>
+    <div id="game-over-text" class="overlay-text">GAME OVER
         <span class="overlay-text-small">Click to Restart</span>
     </div>
-
-    <div id="victory-text" class="overlay-text">
-        VICTORY
+    <div id="victory-text" class="overlay-text">VICTORY
         <span class="overlay-text-small">Click to Restart</span>
     </div>
 
     <iv class="game-container">
+        <!-- INFO SECTION -->
         <div class="game-info-container">
             <div class="game-info">
                 Time <span id="time-remaining">100</span>
@@ -35,6 +31,7 @@
                 Flips <span id="flips">0</span>
             </div>
         </div>
+        <!-- CARDS SECTION -->
         <div class="card">
             <div class="card-back card-face">
                 <img class="cob-web cob-web-top-left" src="assets/Images/Cobweb.png">
@@ -307,9 +304,7 @@
 
             </div>
         </div>
-
     </iv>
-
 </body>
 
 </html>

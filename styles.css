@@ -17,7 +17,7 @@
 html {
     min-height: 100vh;
     cursor: url(Assets/Cursors/Ghost.cur), auto;
-    font-family: Lunacy;
+    font-family: Lunacy, serif;
 }
 
 body {
@@ -34,6 +34,7 @@ body {
 }
 
 .game-info-container {
+    /* start at the first grid line and end at the last grid line, effectively spanning across all columns in the grid. */
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
@@ -47,9 +48,11 @@ body {
 .game-container {
     margin: 50px auto;
     display: grid;
+    /* creates a grid with four columns, each with an automatically determined width.  */
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     justify-content: center;
+    /* elements will appear to recede into the distance as if viewed from a point 500px away. */
     perspective: 500px;
 }
 
@@ -59,6 +62,7 @@ body {
     width: 125px;
 }
 .card:hover{
+    /* auto: a fallback value. */
     cursor: url("Assets/Cursors/GhostHover.cur"), auto;
 }
 
@@ -74,6 +78,7 @@ body {
     border-style: solid;
     overflow: hidden;
     transition: transform 500ms ease-in-out;
+    /* the back face of the element will be hidden when it is rotated away from the viewer. */
     backface-visibility: hidden;
 }
 
@@ -100,7 +105,6 @@ body {
     75%{
         transform: rotate(30deg);
     }
-    
 }
 
 .card-back {
@@ -170,7 +174,6 @@ body {
     transform: rotateY(180deg);
 }
 .overlay-text{
-    position: fixed;
     top:0;
     left:0;
     right:0;
@@ -182,6 +185,8 @@ body {
     color:#FF6D00;
     font-family: Creepy, serif;
     display: none;
+    position: fixed;
+    text-align: center;
 }
 .overlay-text-small{
     font-size: .3em;
