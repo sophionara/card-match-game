@@ -152,7 +152,7 @@ function ready() {
     // grabbing overlays, usually returns HTML collection, but we need array
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(80, cards);
+    let game = new MixOrMatch(100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
